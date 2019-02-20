@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 import HomePage from './containers/HomePage/HomePage';
 import Contact from './containers/Contact/Contact';
-import Navbar from './containers/NavBar/Navbar';
+import Navbar from './components/NavBar/Navbar';
 
 class App extends Component {
   render() {
