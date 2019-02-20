@@ -11,9 +11,9 @@ import './HomePage.scss';
 class HomePage extends Component {
     state = {
         image: [
-            image1,
+            image3,
             image2,
-            image3
+            image1
         ],
         number: 0
     }
@@ -22,10 +22,10 @@ class HomePage extends Component {
         let next = this.state.number;
         if (next < 2) {
             next += 1;
-            this.setState({number: next});
+            this.setState({ number: next });
         } else {
             next = 0;
-            this.setState({number: next});
+            this.setState({ number: next });
         }
     }
 
@@ -33,10 +33,10 @@ class HomePage extends Component {
         let previous = this.state.number;
         if (previous > 0) {
             previous -= 1;
-            this.setState({number: previous});
+            this.setState({ number: previous });
         } else {
             previous = 2;
-            this.setState({number: previous});
+            this.setState({ number: previous });
         }
     }
 
@@ -46,10 +46,10 @@ class HomePage extends Component {
         return (
             <div className="homepage__container">
                 <h1>Tired of Living in Eath? <span>MarsTurism</span> is an option!</h1>
-                <Slider 
+                <Slider
                     slide={slideImage}
                     previous={this.previousImage}
-                    next={this.nextImage}/>
+                    next={this.nextImage} />
             </div>
         );
     }

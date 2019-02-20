@@ -3,32 +3,37 @@ $color-light-gray-dark: rgb(44, 43, 43);
 $color-light-orange: rgb(248, 185, 69);
 $color-white: rgb(255,255,255);
 
+$width-entire-screen: 100%;
+$height-slider: 45vw;
+
 .homepage {
     &__slider {
         background-color: $color-light-gray-dark;
-        width: 100%;
-        height: 35vw;
+        width: $width-entire-screen;
+        height: $height-slider;
         margin-top: 5vh;
         overflow: hidden;
         z-index: 2;
+        transition: all .3s;
 
         img {
             opacity: 0;
             position: relative;
-            left: 10%;
-            width: 80%;
-            height: 35vw;
+            width: 100%;
+            height: auto;
             animation: appear 1.5s;
             animation-fill-mode: forwards;
+            transition: all .3s;
         }
     }
     
     &__container {
-        width: 100%;
+        width: $width-entire-screen;
         height: 100vh;
         position: absolute;
         background-color: $color-light-gray;
         color: $color-white;
+        transition: all .3s;
 
         h1 { 
             text-align: center;
@@ -39,29 +44,32 @@ $color-white: rgb(255,255,255);
             span{ color: $color-light-orange}
         }
 
-        .btn {
-            &__container {
-                position: absolute;
-                top: 21.5vw;
-                z-index: 1;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
+        .btn__container {
+            position: absolute;
+            top: #{$height-slider / 2 + 4.5vw};
+            z-index: 1;
+            width: $width-entire-screen;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: all .3s;
 
-                ion-icon { 
-                    font-size: 4rem;
-                    cursor: pointer;
-                    color: $color-light-orange; 
-                    transition: all .3s;
-                    
-                    &:hover { font-size: 4.5rem }
-                    &:active { font-size: 4rem }
+
+            ion-icon { 
+                font-size: 4rem;
+                cursor: pointer;
+                color: $color-light-orange; 
+                transition: all .3s;
+
+                path {
+                    box-shadow: 5px 10px 10px;
                 }
-            }
+                &:active { font-size: 4rem }
         }
     }
 }
+}
+
 
 @keyframes appear {
     0% { opacity: 0 }
@@ -78,5 +86,77 @@ $color-white: rgb(255,255,255);
 
     100% {
         margin-left: 0;
+    }
+}
+
+//Media Queries
+
+@media (max-width: 1200px) {
+    .homepage {
+        &__slider {
+            height: 50vw;
+            img {
+                height: 50vw;
+            }
+        }
+
+        &__container {
+            .btn__container {
+                top: 30vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .homepage {
+        &__slider {
+            height: 55vw;
+            img { height: 55vw }
+        }
+
+        &__container {
+            .btn__container { top: 33vw }
+        }
+    }
+}
+
+@media (max-width: 1095px) {
+    .homepage {
+        &__slider {
+            height: 60vw;
+            img { height: 60vw }
+        }
+
+        &__container {
+            .btn__container { top: 37vw }
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .homepage {
+        &__slider {
+            height: 65vw;
+            img { height: 65vw }
+        }
+
+        &__container {
+            .btn__container { top: 41vw }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+        .homepage {
+            &__container {
+                h1 {
+                    font-size: 1.7rem;
+                    margin-top: 5vh;
+                }
+                .btn__container {
+                    top: 29vw;
+            }
+        }
     }
 }
