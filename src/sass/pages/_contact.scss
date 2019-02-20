@@ -66,6 +66,8 @@
     transition: all .3s;
 }
 
+
+
 // Media Queries
 
 @media (max-width: 1200px) {
@@ -142,21 +144,10 @@
 @media (max-width: 310px) {
     .contact__container { 
         h1 {font-size: 1.3rem }
-        .form { width: 90% }
-    }
-}
-
-@media (max-width: 310px) {
-    .contact__container { 
-        .form { width: 95% }
-    }
-}
-
-@media (max-width: 310px) {
-    .contact__container { 
         .form { 
             top: 70vh;
             width: 100%;
+            
             button {
                 font-size: 1.2rem;
                 padding: 20px 0;

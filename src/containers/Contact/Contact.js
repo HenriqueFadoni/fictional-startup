@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import Form from '../../components/Form/Form';
 import GoogleMaps from '../../components/GoogleMaps/GoogleMaps';
-import './Contact.scss';
 
 class Contact extends Component {
     state = {

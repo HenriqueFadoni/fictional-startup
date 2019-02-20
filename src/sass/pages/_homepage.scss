@@ -53,8 +53,7 @@ $height-slider: 45vw;
             justify-content: space-between;
             align-items: flex-start;
             transition: all .3s;
-
-
+            
             ion-icon { 
                 font-size: 4rem;
                 cursor: pointer;
@@ -65,31 +64,13 @@ $height-slider: 45vw;
                     box-shadow: 5px 10px 10px;
                 }
                 &:active { font-size: 4rem }
+            }
         }
     }
 }
-}
 
 
-@keyframes appear {
-    0% { opacity: 0 }
-    100% { opacity: 1 }
-}
-
-@keyframes moveIn {
-    0% {
-        margin-left: -20vw;
-        opacity: 0;
-    }
-
-    90% { opacity: 1 }
-
-    100% {
-        margin-left: 0;
-    }
-}
-
-//Media Queries
+//MediaQuery
 
 @media (max-width: 1200px) {
     .homepage {
@@ -159,9 +140,7 @@ $height-slider: 45vw;
                 font-size: 1.7rem;
                 margin-top: 5vh;
             }
-            .btn__container {
-                top: 44vw;
-            }
+            .btn__container { top: 44vw }
         }
     }
 }
@@ -310,12 +289,6 @@ $height-slider: 45vw;
         }
     }
 }
-@media (max-height: 1367) {
-    .homepage__slider {
-        height: 200vw;
-        margin-top: 5vh;
-        overflow: hidden;
-        z-index: 2;
-        transition: all .3s;
-    }
-}
+
+
+
