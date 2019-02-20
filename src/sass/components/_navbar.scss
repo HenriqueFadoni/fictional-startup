@@ -3,22 +3,20 @@
     justify-content: flex-start;
     width: 100%;
     height: 40px;
-    background-color: rgb(59, 57, 57);
-    border-bottom: 3px solid orange;
+    background-color: $color-gray-dark;
+    border-bottom: 3px solid $color-orange;
     transition: all .3s;
 
     button {
-        color: white;
+        color: $color-white;
         cursor: pointer;
         border: none;
         height: 40px;
         font-size: 1.2rem;
-        background-color: rgb(59, 57, 57);
+        background-color: $color-gray-dark;
         padding-right: 10px;
 
-        &:hover {
-            background-color: rgb(87, 84, 84);
-        }
+        &:hover { background-color: $color-gray-dark-light }
     }
 }
 
