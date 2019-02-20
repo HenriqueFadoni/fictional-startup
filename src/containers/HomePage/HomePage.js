@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Slider from '../../components/Slider/Slider';
+
 import image1 from '../../images/image1.jpg';
 import image2 from '../../images/image2.jpg';
 import image3 from '../../images/image3.jpg';
@@ -44,17 +46,10 @@ class HomePage extends Component {
         return (
             <div className="homepage__container">
                 <h1>Tired of Living in Eath? <span>MarsTurism</span> is an option!</h1>
-                <div className="homepage__slider">
-                    <img src={slideImage} alt="Slide Show"/>
-                    <div className="btn__container">
-                        <button 
-                            className="btn btn-previous"
-                            onClick={this.previousImage}><ion-icon name="arrow-dropleft"></ion-icon></button>
-                        <button
-                            className="btn btn-next"
-                            onClick={this.nextImage}><ion-icon name="arrow-dropright"></ion-icon></button>
-                    </div>
-                </div>
+                <Slider 
+                    slide={slideImage}
+                    previous={this.previousImage}
+                    next={this.nextImage}/>
             </div>
         );
     }
